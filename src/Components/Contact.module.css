@@ -1,0 +1,16 @@
+.Heading {
+    font-weight: 700;
+    margin: 12px 70px;
+  }
+  .Paragraph {
+    margin:12px 70px;
+  }
+  @media (max-width:800px) {
+    .Heading{
+      margin: 0px 20px;
+    }
+    .Paragraph {
+      margin:8px 25px;
+      font-size: .8rem;
+    }
+  }

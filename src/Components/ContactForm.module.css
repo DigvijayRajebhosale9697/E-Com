@@ -1,0 +1,24 @@
+.Container {
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-around;
+  height: 100vh;
+  margin: auto;
+}
+
+.ContactIMG img {
+  height: 70vh;
+  width: 100%;
+}
+
+@media (max-width: 1050px) {
+  .Container {
+    flex-direction: column;
+    height: auto;
+  }
+}
+@media (max-width:600px) {
+    .ContactIMG img {
+        height: 35vh;
+      }
+}

@@ -1,0 +1,37 @@
+.AboutUsP {
+  margin: 24px;
+  height: 75vh;
+}
+.AC {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.L img {
+  height: 50vh;
+}
+.L {
+  width: 10vw;
+}
+.R {
+  width: 50vw;
+}
+
+@media (max-width: 1350px) {
+  .AboutUsP {
+    margin: 0;
+    height: 100vh;
+  }
+}
+@media (max-width: 1270px) {
+  .AC {
+    flex-direction: column;
+  }
+  .L {
+    width: auto;
+  }
+  .R{
+    width: auto;
+    margin: 20px;
+  }
+}

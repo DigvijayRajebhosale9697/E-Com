@@ -1,0 +1,227 @@
+.HomeContainer {
+  margin-left: 100px;
+  height: 82vh;
+  width: 90vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* flex-wrap: wrap; */
+}
+.RIGHTLEFT {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  flex-direction: column;
+  font-size: 1.5vw;
+}
+.RIGHTLEFT h2 {
+  font-size: 2vw;
+  font-weight: bold;
+}
+
+.ABH {
+  background-image: url("/public/Image/w2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-right: 50px;
+  text-align: end;
+  font-size: 5vw;
+  text-transform: capitalize;
+}
+.Left h1 {
+  font-weight: 800;
+  font-size: 75px;
+  line-height: 75px;
+  letter-spacing: 8px;
+  margin-bottom: 8px;
+  background-image: url("/public/Image/w2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.Left p {
+  margin-left: 10px;
+}
+.BTN {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  cursor: pointer;
+}
+.SBTN {
+  background: red;
+}
+.SBTN a {
+  text-decoration: none;
+  color: white;
+}
+.CBTN {
+  background: transparent;
+  border: 1px solid grey;
+}
+.CBTN a {
+  color: gray;
+  text-decoration: none;
+}
+.SBTN:hover {
+  background-color: black;
+}
+.CBTN:hover {
+  background-color: black;
+  color: white;
+}
+
+.Logoss img {
+  padding: 12px;
+  transition: 1s ease-in-out;
+}
+.Logoss img:hover {
+  transform: translateY(-20%);
+}
+
+.I {
+  background-image: url("/public/Image/peter-gargiulo-cGNCepznaV8-unsplash.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 150vh;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
+.I h1,
+.I p,
+.I button {
+  margin: 12px;
+}
+.I button {
+  width: 15vmax;
+  padding: 8px 24px;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  margin: auto;
+}
+.C {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.C1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid red; */
+  height: 50vh;
+  width: 25vw;
+}
+.C2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Cs img {
+  transition: all ease-in-out 0.2s;
+  opacity: 0.6;
+  scale: 0.8;
+  height: 40vh;
+}
+.C2 img {
+  transition: all ease-in-out 0.2s;
+  opacity: 0.6;
+  scale: 0.8;
+  height: 40vh;
+}
+.C1 img {
+  transition: all ease-in-out 0.2s;
+  opacity: 0.6;
+  scale: 0.8;
+  height: 30vh;
+}
+.C2 img:hover {
+  opacity: 1;
+  scale: 1;
+}
+.Cs img:hover {
+  opacity: 1;
+  scale: 1;
+}
+.C1 img:hover {
+  opacity: 1;
+  scale: 1;
+}
+.CSF {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.AboutUs {
+  margin: 24px;
+}
+
+.AC {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.L img {
+  height: 50vh;
+}
+.L {
+  width: 10vw;
+}
+.R {
+  width: 50vw;
+}
+@media (max-width: 880px) {
+  .HomeContainer {
+    flex-direction: column;
+    height: auto;
+    margin-left: 20px;
+  }
+  .Right img {
+    height: 450px;
+  }
+  .I {
+    height: 140vh;
+  }
+  .ABH{
+    font-size: 1.8rem;
+  }
+  .I h1{
+    font-size: 1.5rem;
+  }
+  .RIGHTLEFT h2{
+    font-size: 1.2rem;
+  }
+  .RIGHTLEFT{
+    font-size: .8rem;
+  }
+  .I p{
+    font-size: .8rem;
+  }
+  .C {
+    flex-direction: column;
+    height: auto;
+  }
+  .C1 {
+    height: auto;
+  }
+  .C1 img {
+    height: 250px;
+  }
+  .C2{
+    display: none;
+  }
+  .SBTN {
+   margin: 0;
+  }
+}

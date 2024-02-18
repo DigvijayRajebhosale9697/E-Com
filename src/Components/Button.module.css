@@ -1,0 +1,49 @@
+.BTN2 {
+  padding: 10px 20px;
+  /* border: 1px solid black; */
+  border: none;
+  background-color: black;
+  color: white;
+  border-radius: 4px;
+  margin: 12px;
+  width: 13vw;
+}
+.BTN3 {
+  padding: 10px 20px;
+  border: 1px solid black;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border-radius: 4px;
+  margin: 12px;
+  width: 27.5vw;
+}
+
+.FORM_CONTROL {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 18px;
+  padding: 0px 10px;
+}
+
+.FORM_CONTROL input {
+  height: 48px;
+  padding: 0px 8px;
+}
+
+.FORM_CONTROL label {
+  font-size: 14px;
+  background-color: white;
+}
+@media (max-width: 1030px) {
+  .BTN2 {
+    width: auto;
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+  .BTN3 {
+    width: auto;
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
