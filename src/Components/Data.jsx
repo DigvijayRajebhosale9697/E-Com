@@ -1,10 +1,11 @@
 
 export const items = [
+  
   {
     id: 1,
     category: "mobiles",
     title: "Apple iPhone 15",
-    imgSrc: "https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/71d7rfSl0wL._SX679_.jpg",
+    imgSrc: "https://www.maplestore.in/cdn/shop/files/iPhone_15_Blue_PDP_Image_Position-1__en-IN_9d151e10-d809-499c-95cd-5c7cb7ea9dbe.jpg?v=1701822313",
     amazonLink: "https://www.amazon.in/Apple-iPhone-15-128-GB/dp/B0CHX2F5QT/ref=sr_1_1_sspa?crid=2ALR6A0QR6100&keywords=iphone%2B15&qid=1702967350&sprefix=iphone%2B1%2Caps%2C288&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1",
     description: "Apple iPhone 15 (128 GB) - Blue",
     price: "89999",

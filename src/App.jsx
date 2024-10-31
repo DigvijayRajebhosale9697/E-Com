@@ -1,36 +1,129 @@
+import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import Product from "./Components/Product";
 import Product_Details from "./Components/Product_Details";
-// import Search_Items from "./Components/Search_Items";
 import Cart from "./Components/Cart";
-import { items } from "./Components/Data";
-import { useState } from "react";
 import Home from "./Components/Home";
-import About from "./Components/About";
-
-import Contact from './Components/Contact'
-
+import About from "./Components/About/About";
+import Contact from "./Components/Contact";
+import Login from "./Components/Login/Login";
+import Signup from "./Components/Signup/Signup";
+import ProtectedRoute from "./Components/ProtrectedRoutes/ProtectedRoute";
+import { fetchProductData } from "./services/productService";
 
 const App = () => {
-  const [data, setdata] = useState([...items]);
-  const [cart, setcart] = useState([])
-  return (
-    <>
-      <Router>
-        <Navbar setdata={setdata} cart={cart} />
-        <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/About" element={<About />}></Route>
-          <Route path="/Contact" element={<Contact />}></Route>
-          <Route path="/product" element={<Product cart={cart} setcart={setcart} items={data} setdata={setdata} />}></Route>
-          <Route path="/product/:id" element={<Product_Details cart={cart} setcart={setcart} />}></Route>
-          {/* <Route path="Cart" element={<Search_Items />}></Route> */}
-          <Route path="cart" element={<Cart cart={cart} setcart={setcart} />}></Route>
-        </Routes>
+  const [data, setData] = useState([]);
+  const [filteredData, setFilteredData] = useState([]);
+  const [cart, setCart] = useState([]);
 
-      </Router>
-    </>
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const productData = await fetchProductData();
+        setData(productData);
+        setFilteredData(productData);
+      } catch (error) {
+        console.error("Error fetching product data:", error);
+      }
+    };
+
+    getData();
+  }, []);
+
+  console.log("Fetched Data:", data);
+
+  const filterByCategory = (category) => {
+    if (category === "all") {
+      setFilteredData(data);
+    } else {
+      const filtered = data.filter((product) => product.category === category);
+      setFilteredData(filtered);
+    }
+  };
+
+  return (
+    <Router>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/createUser" element={<Signup />} />
+        <Route
+          path="/"
+          element={
+            <ProtectedRoute>
+              <>
+                <Navbar cart={cart} />
+                <Home />
+              </>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/About"
+          element={
+            <ProtectedRoute>
+              <>
+                <Navbar cart={cart} />
+                <About />
+              </>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/Contact"
+          element={
+            <ProtectedRoute>
+              <>
+                <Navbar cart={cart} />
+                <Contact />
+              </>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/product"
+          element={
+            <ProtectedRoute>
+              <>
+                <Navbar cart={cart} />
+                <Product
+                  cart={cart}
+                  setCart={setCart}
+                  items={filteredData}
+                  filterByCategory={filterByCategory}
+                />
+              </>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/product/:id"
+          element={
+            <ProtectedRoute>
+              <>
+                <Navbar cart={cart} />
+                <Product_Details
+                  cart={cart}
+                  setCart={setCart}
+                  items={filteredData}
+                />
+              </>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/cart"
+          element={
+            <ProtectedRoute>
+              <>
+                <Navbar cart={cart} />
+                <Cart cart={cart} setCart={setCart} />
+              </>
+            </ProtectedRoute>
+          }
+        />
+      </Routes>
+    </Router>
   );
 };
 

@@ -1,9 +1,11 @@
-import Footer from "./Footer";
+import Footer from "../Footer/Footer";
+// import Navbar from '../Navbar'
 import "./About.css";
 
 const About = () => {
   return (
     <>
+      {/* <Navbar/> */}
       <div className="AboutUsP">
         {/* <h1 className="ABHP">About Us</h1> */}
         <div className="AC">
@@ -20,14 +22,17 @@ const About = () => {
                 just an E-Com; its a community of passionate shoppers who
                 appreciate the thrill of finding the perfect item. Thank you for
                 being a part of the E-Com Website family. Lets make every
-                shopping experience unforgettable! Happy shopping! <br /><strong> [Digvijay
-                Rajebhosale] <br /> Founder, [E-Com Website] </strong>
+                shopping experience unforgettable! Happy shopping! <br />
+                <strong>
+                  {" "}
+                  [Digvijay Rajebhosale] <br /> Founder, [E-Com Website]{" "}
+                </strong>
               </p>
             </p>
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 };

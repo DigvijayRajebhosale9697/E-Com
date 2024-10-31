@@ -1,7 +1,7 @@
 
 import Style from './Contact.module.css'
 import ContactForm from './ContactForm'
-import Footer from "./Footer";
+import Footer from "./Footer/Footer";
 
 const Contact = () => {
   return (

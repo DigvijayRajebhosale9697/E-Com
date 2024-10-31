@@ -1,0 +1,134 @@
+.SignupContainer {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  }
+  
+  .SignupIMG {
+    display: none;
+  }
+  
+  .RightContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 30%;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: white;
+    border-radius: 8px;
+    animation: slideIn 1.2s ease-in-out;
+  }
+  
+  .RightLoginImg > img {
+    width: 100px;
+    height: auto;
+  }
+  
+  .form-group {
+    margin-top: 1rem;
+    width: 100%;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .FORM-S {
+    width: 80%;
+    margin-top: 0.5rem;
+  }
+  
+  .BTN-Container-Signup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .submit-BTN {
+    width: 250px;
+    height: 45px;
+    background-color: #205fbf;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .Login-Link-BTN {
+    width: 250px;
+    height: 45px;
+    border-radius: 5px;
+    border: solid 1px #a9aca9;
+    background-color: white;
+    cursor: pointer;
+    color: #606060;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+  
+  .lp-parent-container-terms {
+    word-spacing: 2px;
+    font-size: var(--font-size-normal-view);
+    color: #646d82;
+  }
+  
+  .lp-parent-container-terms [type="checkbox"] {
+    margin-right: 5px;
+    position: relative;
+    top: 3px;
+  }
+  
+  .form-group input::placeholder {
+    font-size: 0.8rem;
+  }
+  
+  @media (max-width: 1024px) {
+    .leftLoginImg,
+    .RightContainer {
+      width: 50%;
+    }
+    .SignupContainer {
+      height: auto;
+    }
+    .RightContainer {
+      margin: 2rem 0;
+      box-shadow: none;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .leftLoginImg,
+    .RightContainer {
+      width: 80%;
+    }
+  
+    .RightContainer {
+      margin: 2rem 0;
+      box-shadow: none;
+    }
+  }
+  @media (max-width: 430px) {
+    .lp-remPass-container {
+      flex-direction: column;
+    }
+    .Login-Container {
+      height: auto;
+    }
+    .FORM-S {
+      width: 100%;
+    }
+  }
+  

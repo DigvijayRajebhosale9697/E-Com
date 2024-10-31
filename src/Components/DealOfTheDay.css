@@ -1,0 +1,52 @@
+.deal-of-the-day-container {
+    background-color: #4b3fda;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+  }
+  
+  .deal-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .deal-image {
+    width: 150px; /* Adjust the size as needed */
+    margin-right: 40px;
+  }
+  
+  .deal-text {
+    color: white;
+    text-align: left;
+  }
+  
+  .deal-subtitle {
+    color: #ffd700; /* Adjust for a yellow accent color */
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  
+  .deal-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0 0 20px;
+  }
+  
+  .shop-now-button {
+    background-color: #ffd700; /* Yellow button */
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .shop-now-button:hover {
+    background-color: #f5c700;
+  }
+  
